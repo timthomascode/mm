@@ -11,3 +11,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.active-row, .feedback, .history-row{
+  display: flex;
+  margin: 10px;
+}
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.correct {
+  background-color: yellowgreen;
+  color: black;
+}
+
+.incorrect {
+  background-color: red;
+  color: white;
+  margin-left: 10px;
+}
+
+.pin {
+  background-color: white;
+  border: 5px solid black;
+  margin: 5px;
+}
+.submit-button {
+  background-color: green;
+  color: white;
+  font-size: 18pt;
+  font-weight: bold;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10px;
+  border-width: 5px;
+}
