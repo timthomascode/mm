@@ -21,8 +21,6 @@ const COLORS = {
   6: "green"
 }
 
-console.log(secretCode)
-
 function App() {
   const [history, setHistory] = useState([]);
   const [recentGuess, setRecentGuess] = useState(Array(4).fill(null));
