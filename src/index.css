@@ -23,6 +23,8 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
 }
 .correct {
   background-color: yellowgreen;
@@ -40,6 +42,7 @@ code {
   border: 5px solid black;
   margin: 5px;
 }
+
 .submit-button {
   background-color: green;
   color: white;

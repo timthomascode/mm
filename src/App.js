@@ -12,6 +12,15 @@ for (let i = 0; i < 4; i++) {
   secretCode.push(getRandomNumber(1,6))
 }
 
+const COLORS = {
+  1: "orchid",
+  2: "deepskyblue",
+  3: "crimson",
+  4: "blueviolet",
+  5: "gold",
+  6: "green"
+}
+
 console.log(secretCode)
 
 function App() {
@@ -21,6 +30,10 @@ function App() {
   const [win, setWin] = useState(false);
 
   function handleSubmit() {
+    if (recentGuess.some((element) => element === null)) {
+      return;
+    }
+
     const feedback = calculateFeedback(recentGuess);
 
     if (feedback[0] === 4) {
@@ -98,7 +111,7 @@ function HistoryTable({ history }) {
 
 function Pin({value, onPinClick}) {
   return (
-    <div className="pin circle" onClick={onPinClick}>{value}</div>
+    <div className="pin circle" style={{backgroundColor: COLORS[value]}} onClick={onPinClick}></div>
   )
 }
 
@@ -117,7 +130,7 @@ function ActiveRow({ recentGuess, pinClick, onSubmitClick }) {
 
 function HistoryPin({ value }) {
   return (
-    <div className="pin circle">{value}</div>
+    <div className="pin circle" style={{backgroundColor: COLORS[value]}}></div>
   )
 }
 
